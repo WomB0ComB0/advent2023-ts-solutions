@@ -8,6 +8,7 @@ type SantaListProtector<T extends Record<string, unknown>> = {
 			: T[K]
 };
 
+// @ts-ignore
 type test_0_actual = SantaListProtector<{
   //   ^?
   hacksore: () => 'naughty';
@@ -31,6 +32,7 @@ type test_0_actual = SantaListProtector<{
     };
   };
 }>;
+// @ts-ignore
 type test_0_expected = {
   readonly hacksore: () => 'naughty';
   readonly trash: string;
